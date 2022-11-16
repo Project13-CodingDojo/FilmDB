@@ -1,16 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -28,30 +19,106 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .nav{
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
   align-items: center;
+  background-color: rgb(38, 50, 71);
+  margin: 0 auto;
+  padding: 2%;
+}
+
+.nav-item{
+  margin-right: 1rem;
+}
+
+.last-nav-item{
+  margin-right: auto;
+}
+
+.heading-wrap{
+  display: flex;
+  align-items: center;
+}
+
+.header-primary{
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+}
+
+.header-secondary{
+  color: rgb(27, 36, 52);
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+
+}
+
+.logo{
+  width: 10rem;
+  height: 10rem;
+}
+
+
+
+.search-input{
+  border-radius: 20px;
+  height: 40px;
+  width: 300px;
+  border: none;
+  padding: 2px 23px 2px 30px;
+}
+
+.button{
+  margin-left: 1rem;
+  border-radius: 25px;
+  width: 100px;
+  padding: 7px;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  cursor: pointer;
+
+}
+
+.links{
+  margin-left: 2rem;
 }
 
 .main{
   display: flex;
   justify-content: space-around;
-  margin-top: 60px;
+  margin-top: 6rem;
+}
 
+.film-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: rgb(226, 226, 227);
+  padding: 3rem;
+  border-radius: 25px;
+}
+
+.form-item{
+  margin-bottom: 2rem;
+}
+
+.form-input{
+  margin-right: 2rem;
+  border-radius: 25px;
+  border: none;
+  width: 225px;
+  padding: 3px 20px 3px 15px;
 
 }
 
-.main1, .main2{
-  display: flex;
-  justify-content: space-around;
+
+.m-3{
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+
 }
