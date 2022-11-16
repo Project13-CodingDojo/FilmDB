@@ -18,7 +18,7 @@ return (
 
 
         <div>
-        <NavLink to="/" className="m-3">Home </NavLink>|
+        <NavLink to="/films" className="m-3">Home </NavLink>|
         <NavLink to="/" className="m-3">About </NavLink>|
         <NavLink to="/" className="m-3">My Favorites </NavLink>
         <button >Logout</button>
