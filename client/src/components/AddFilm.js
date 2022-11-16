@@ -22,18 +22,22 @@ return (
 
     <div class="main">
 
-        <div>
-            <h2>Films by Genre:</h2>
+        <div className='film-categories'>
+            <h2 className='header-secondary'>Films by Genre:</h2>
         </div>
-        <div>
-            <h2>Add a Film:</h2>
-            <div class="main1">
-                <input type="text" value={title} onChange={(e)=>setTitle(e.target.value)} placeholder="Title"/>
-                <input type="text"  value={director} onChange={(e)=>setDirector(e.target.value)} placeholder="Director"/> 
+
+
+
+
+        <div className='film-form'>
+            <h2 className='header-secondary'>Add a Film:</h2>
+            <div class="form-item">
+                <input className='form-input' type="text" value={title} onChange={(e)=>setTitle(e.target.value)} placeholder="Title"/>
+                <input className='form-input'type="text"  value={director} onChange={(e)=>setDirector(e.target.value)} placeholder="Director"/> 
             </div>
-            <div class="main2">
-                <input type="number"  value={yearReleased} onChange={(e)=>setYearReleased(e.target.value)} placeholder="Year Released"/>
-                <select  value={genre} onChange={(e)=>setGenre(e.target.value)} >
+            <div class="form-item">
+                <input className='form-input' type="number"  value={yearReleased} onChange={(e)=>setYearReleased(e.target.value)} placeholder="Year Released"/>
+                <select  className='form-input' value={genre} onChange={(e)=>setGenre(e.target.value)} >
                     <option>Select A Genre</option>
                     <option value="Comedy">Comedy</option>
                     <option value="Drama">Drama</option>
@@ -54,17 +58,16 @@ return (
                 </select>
             </div>
 
-            <div class="main3">
-                <input type="text" value={cast} onChange={(e)=>setCast(e.target.value)} placeholder="Cast Members"/>
+            <div class="form-item">
+                <input className='form-input' type="text" value={cast} onChange={(e)=>setCast(e.target.value)} placeholder="Cast Members"/>
             </div>
 
-            <div class="main4">
-                <input type="text" value={factoids} onChange={(e)=>setFactoids(e.target.value)} placeholder="Fun facts..."/>
+            <div class="form-item">
+                <input className='form-input' type="text" value={factoids} onChange={(e)=>setFactoids(e.target.value)} placeholder="Fun facts..."/>
             </div>
 
-            <div class="button">
-            <button type='submit' className='btn btn-info mt-3'>Add Film</button>
-
+            <div>
+            <button type='submit' className='button'>Add Film</button>
             </div>
 
 

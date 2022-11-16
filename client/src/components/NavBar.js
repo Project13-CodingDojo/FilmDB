@@ -1,29 +1,36 @@
 import axios from 'axios'
 import React from 'react'
 import {NavLink, useNavigate} from 'react-router-dom'
+import filmlogo from '../images/filmlogo.png'
 
 const NavBar = () => {
 return (
     <div class="nav">
-        <div>
-            <h1>Film Database</h1>
+
+        <div className='heading-wrap last-nav-item'>
+            <div className='logo-box'>
+                <img src={filmlogo} alt="logo" className="logo"></img>
+            </div>
+            <div>
+                <h1 className='header-primary'>Film Database</h1>
+            </div>
         </div>
 
-        <div>
-            <form id="form"> 
-                <input type="search" id="query" name="q" placeholder="Search..."/>
-                <button>Search</button>
+        <div className='nav-item'>
+            <form className='search-bar' id="form"> 
+                <input className='search-input' type="search" id="query" name="q" placeholder="Search..."/>
+                <button className='button'>Search</button>
             </form>
-        </div>   
+        </div>
 
 
-        <div>
+        <div className='links nav-item'>
         <NavLink to="/" className="m-3">Home </NavLink>|
         <NavLink to="/" className="m-3">About </NavLink>|
         <NavLink to="/" className="m-3">My Favorites </NavLink>
-        <button >Logout</button>
-            
+        <button className='button'>Logout</button>
         </div>
+
     </div>
 )
 }
