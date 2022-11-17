@@ -6,7 +6,6 @@ import ViewFilm from './ViewFilm';
 
 const ViewGenre = (props) => {
    const { genre } = props;
-   const { id } = useParams();
    const [list, setList] = useState([])
 
    useEffect(() => {

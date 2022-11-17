@@ -18,22 +18,22 @@ function App() {
          <BrowserRouter>
             <NavBar />
             <Routes>
-               <Route path="/films/Action" element={<ViewGenre genre={"action"} />} />
-               <Route path="/films/Anime" element={<ViewGenre genre={"anime"} />} />
-               <Route path="/films/Bollywood" element={<ViewGenre genre={"bollywood"} />} />
+               <Route path="/films/Action" element={<ViewGenre genre={"Action"} />} />
+               <Route path="/films/Anime" element={<ViewGenre genre={"Anime"} />} />
+               <Route path="/films/Bollywood" element={<ViewGenre genre={"Bollywood"} />} />
                <Route path="/films/Comedy" element={<ViewGenre genre={"Comedy"} />} />
-               <Route path="/films/Crime_Noir" element={<ViewGenre genre={"crimeNoir"} />} />
-               <Route path="/films/Documentary" element={<ViewGenre genre={"documentary"} />} />
-               <Route path="/films/Drama" element={<ViewGenre genre={"drama"} />} />
-               <Route path="/films/Family" element={<ViewGenre genre={"family"} />} />
-               <Route path="/films/French_Cinema" element={<ViewGenre genre={"frenchCinema"} />} />
-               <Route path="/films/Horror" element={<ViewGenre genre={"horror"} />} />
-               <Route path="/films/Horror_Comedy" element={<ViewGenre genre={"horrorComedy"} />} />
-               <Route path="/films/Kung_fu" element={<ViewGenre genre={"kungfu"} />} />
-               <Route path="/films/Romcom" element={<ViewGenre genre={"romcom"} />} />
-               <Route path="/films/Sci_Fi" element={<ViewGenre genre={"sciFi"} />} />
-               <Route path="/films/Silent_Movie" element={<ViewGenre genre={"silentMovie"} />} />
-               <Route path="/films/Thriller" element={<ViewGenre genre={"thriller"} />} />
+               <Route path="/films/Crime_Noir" element={<ViewGenre genre={"Crime Noir"} />} />
+               <Route path="/films/Documentary" element={<ViewGenre genre={"Documentary"} />} />
+               <Route path="/films/Drama" element={<ViewGenre genre={"Drama"} />} />
+               <Route path="/films/Family" element={<ViewGenre genre={"Family"} />} />
+               <Route path="/films/French_Cinema" element={<ViewGenre genre={"French Cinema"} />} />
+               <Route path="/films/Horror" element={<ViewGenre genre={"Horror"} />} />
+               <Route path="/films/Horror_Comedy" element={<ViewGenre genre={"Horror/Comedy"} />} />
+               <Route path="/films/Kung_fu" element={<ViewGenre genre={"Kung-Fu"} />} />
+               <Route path="/films/Romcom" element={<ViewGenre genre={"Romcom"} />} />
+               <Route path="/films/Sci_Fi" element={<ViewGenre genre={"Sci-Fi"} />} />
+               <Route path="/films/Silent_Movie" element={<ViewGenre genre={"Silent Movie"} />} />
+               <Route path="/films/Thriller" element={<ViewGenre genre={"Thriller"} />} />
                <Route path="/" element={<Register />} />
                <Route path="/films" element={<AddFilm />} />
                <Route path="/film/:id" element={<ViewFilm />} />
