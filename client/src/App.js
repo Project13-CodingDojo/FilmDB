@@ -23,6 +23,8 @@ import Bollywood from "./components/Bollywood"
 import Anime from "./components/Anime"
 import ViewFilm from "./components/ViewFilm"
 import EditFilm from "./components/EditFilm"
+import Login from './components/Login';
+
 
 
 function App() {
@@ -51,6 +53,9 @@ function App() {
         <Route path="/films" element={<AddFilm/>}/>
         <Route path="/film/:id" element={<ViewFilm/>} />
         <Route path="/update/:id" element={<EditFilm/>} />
+        <Route path="/login" element={<Login/>}/>
+
+
       </Routes>
       </BrowserRouter>
 
