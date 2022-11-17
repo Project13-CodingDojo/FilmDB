@@ -5,7 +5,7 @@ module.exports =(app) => {
 
     app.get('/api/film/:id', FilmController.getOneFilm)
 
-    app.post('/api/addFilm', FilmController.addFilm)
+    app.post('/api/films', FilmController.addFilm)
 
     app.put('/api/update/:id', FilmController.updateFilm)
 

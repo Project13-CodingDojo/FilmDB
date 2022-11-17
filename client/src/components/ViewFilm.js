@@ -55,7 +55,7 @@ const handleDeleteFilm = () => {
 
 return (
 
-
+<div className="main">
 
     <div class="film-details">
 
@@ -63,13 +63,7 @@ return (
 
             <div>
 
-            <h2> {title} </h2>
-
-            <Link to={`/update/${id}`}>
-            <button>Edit</button>
-            </Link>
-
-            <button onClick={handleDeleteFilm}>Delete</button>
+            <h2 className="header-secondary"> {title} </h2>
 
             </div>
 
@@ -80,10 +74,23 @@ return (
             <p className="detail-line"> <strong>Factoids:</strong> {factoids}</p>
             <p className="detail-line"> <strong>Image:</strong> {image}</p>
 
+            <div>
+
+
+        <Link to={`/update/${id}`}>
+        <button className="button">Edit</button>
+        </Link>
+
+        <button className="button" onClick={handleDeleteFilm}>Delete</button>
+
+        </div>
+
 
         </div>
 
     </div>
+
+</div>
         
 
 
