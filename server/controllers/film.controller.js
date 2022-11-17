@@ -3,8 +3,8 @@ const Film = require ('../models/film.model')
 module.exports = {
     getAllFilms:(req,res)=>{
         Film.find()
-        .then((result)=>{
-            res.json(result)
+        .then((newFilm)=>{
+            res.json({newFilm})
         }).catch((err)=>{
             res.status(400).json(err)
         })
@@ -23,28 +23,33 @@ module.exports = {
     addFilm:(req,res)=>{
         Film.create(req.body)
         .then((result)=>{
-            res.json(result)
+            res.json({result})
         }).catch((err)=>{
-            res.status(400).json(err)
+            res.status(400).json({err})
         })
     },
     
-    updateFilm:(req,res)=>{
-        Film.updateOne({_id:req.params.id})
-        .then((result)=>{
-            res.json(result)
-        }).catch((err)=>{
-            res.status(400).json(err)
-        })
-    },
+    updateFilm: (req,res) => {
+        Film.findOneAndUpdate({ _id: req.params.id }, req.body, {
+            new: true,
+            runValidators: true,
+            })
+            .then((updatedFilm) => {
+                res.json({ updatedFilm});
+            })
+            .catch((err) => {
+                res.status(400).json({ err });
+            });
+        },
     
     deleteFilm:(req,res)=>{
-        Film.deleteOne({_id:req.params.id})
-        .then((result)=>{
-            res.json(result)
-        }).catch((err)=>{
-            res.status(400).json(err)
+        Film.deleteOne({ _id: req.params.id })
+        .then((deletedId) => {
+            res.json({ deletedId });
         })
+        .catch((err) => {
+            res.status(400).json({ err });
+        });
     },
 
     getComedy:(req,res)=>{

@@ -17,7 +17,7 @@ app.use(cors({
 
 require('./config/mongoose.config')
 require('./routes/film.routes')(app)
-require('./routes/user.route')(app)
+require('./routes/user.routes')(app)
 
 
 

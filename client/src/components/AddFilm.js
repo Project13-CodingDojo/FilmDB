@@ -13,12 +13,14 @@ const AddFilm = () => {
     const [cast,setCast] = useState('')
     const [factoids,setFactoids] = useState('')
     const [image,setImage] = useState('')
+    const [errors, setErrors] = useState({})
+
 
     const navigate = useNavigate()
 
 
-    const submitHandler = (e) => {
-        e.preventDefault()
+    const handleSubmit = (e) => {
+        e.preventDefault();
         axios.post('http://localhost:8000/api/addFilm',{
             title,
             director,
@@ -27,13 +29,14 @@ const AddFilm = () => {
             cast,
             factoids,
             image
-        }).then((res)=>{
-            console.log(res)
-            navigate('/')
+        }).then((response)=>{
+            console.log(response)
+            navigate('films');
         }).catch((err)=>{
-            console.log(err)
-        })
-    }
+            console.log(err.response.data.err.errors);
+            setErrors(err.response.data.err.errors);
+        });
+    };
 
 
 
@@ -81,15 +84,24 @@ return (
 
             <div className='film-form'>
                     <h2 className=' form-item header-secondary'>Add a Film:</h2>
-                    <form onSubmit={submitHandler}>
+                    <form onSubmit={handleSubmit}>
                         <div class="form-item">
-                            <input className='form-input' type="text" value={title} onChange={(e)=>setTitle(e.target.value)} placeholder="Title"/>
-                            <input className='form-input'type="text"  value={director} onChange={(e)=>setDirector(e.target.value)} placeholder="Director"/> 
+                            <input className='form-input' type="text" value={title} onChange={(e)=>setTitle(e.target.value)} placeholder="Title"/> 
+                            {errors.title ? <p>{errors.title.message}</p> : null}
+                        </div>
+                        <div class="form-item">
+                            <input className='form-input'type="text"  value={director} onChange={(e)=>setDirector(e.target.value)} placeholder="Director"/>
+                            {errors.director ? <p>{errors.director.message}</p> : null}
                         </div>
                         <div class="form-item">
                             <input className='form-input' type="number"  value={yearReleased} onChange={(e)=>setYearReleased(e.target.value)} placeholder="Year Released"/>
+                            {errors.yearReleased ? <p>{errors.yearReleased.message}</p> : null}
+                        </div>
+
+                        <div className='form-item'>
                             <select  className='form-input' value={genre} onChange={(e)=>setGenre(e.target.value)} >
-                                <option>Select A Genre</option>
+
+                                <option value="">Select a Genre</option>
                                 <option value="Comedy">Comedy</option>
                                 <option value="Drama">Drama</option>
                                 <option value="Horror">Horror</option>
