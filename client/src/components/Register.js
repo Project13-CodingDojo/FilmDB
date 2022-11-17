@@ -33,28 +33,47 @@ const Register = () => {
 
     return (
 
-        <div>
-            <h1>Please Register</h1>
-            <Link to='/login'>Already have an Account</Link>
-            <form onSubmit={submitHandler} className='col-3 mx-auto'>
-                <label>Username:</label>
-                <input type="text" className='form-control'onChange={(e)=>setUserName(e.target.value)}></input>
+    <div className='main'>
+
+        <div className='registration-form'>
+
+            <div className='form-item'>
+                <h1 className='header-secondary'>Please Register</h1>
+                <Link to='/login' className='login-link'>Already have an Account?</Link>
+            </div>
+
+
+            <form onSubmit={submitHandler} >
+
+                <div className='form-item'>
+                <label className='form-label'>Username:</label>
+                <input type="text" className='form-input'onChange={(e)=>setUserName(e.target.value)}></input>
                 {errors.username ?<span className="text-danger">{errors.username.message}</span> : null}<br></br>
+                </div>
 
-                <label>Email:</label>
-                <input type="text" className='form-control'onChange={(e)=>setEmail(e.target.value)}></input>
+                <div className='form-item'>
+                <label className='form-label'>Email:</label>
+                <input type="text" className='form-input'onChange={(e)=>setEmail(e.target.value)}></input>
                 {errors.email ?<span className="text-danger">{errors.email.message}</span> : null}<br></br>
-                <label>Password:</label>
-                <input type="password" className='form-control'onChange={(e)=>setPassword(e.target.value)}></input>
+                </div>
+
+                <div className='form-item'>
+                <label className='form-label'>Password:</label>
+                <input type="password" className='form-input'onChange={(e)=>setPassword(e.target.value)}></input>
                 {errors.password ?<span className="text-danger">{errors.password.message}</span> : null}<br></br>
+                </div>
 
-                <label>Confirm Password:</label>
-                <input type="password" className='form-control'onChange={(e)=>setConfirmPassword(e.target.value)}></input>
+                <div className='form-item'>
+                <label className='form-label'>Confirm Password:</label>
+                <input type="password" className='form-input'onChange={(e)=>setConfirmPassword(e.target.value)}></input>
                 {errors.confirmPassword ?<span className="text-danger">{errors.confirmPassword.message}</span> : null}<br></br>
+                </div>
 
-                <button className='btn btn-info mt-3'>Register</button>
+                <button className='button'>Register</button>
             </form>
         </div>
+
+    </div>
     )
 
 

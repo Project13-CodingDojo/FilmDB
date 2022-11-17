@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
+*{
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -51,7 +53,7 @@
   color: rgb(27, 36, 52);
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 
 }
 
@@ -72,6 +74,7 @@
 
 .button{
   margin-left: 1rem;
+  margin-top: 1rem;
   border-radius: 25px;
   width: 100px;
   padding: 7px;
@@ -82,41 +85,6 @@
 
 }
 
-
-.header-secondary{
-  color: rgb(27, 36, 52);
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 2.5rem;
-
-}
-
-.logo{
-  width: 10rem;
-  height: 10rem;
-}
-
-
-
-.search-input{
-  border-radius: 20px;
-  height: 40px;
-  width: 300px;
-  border: none;
-  padding: 2px 23px 2px 30px;
-}
-
-.button{
-  margin-left: 1rem;
-  border-radius: 25px;
-  width: 100px;
-  padding: 7px;
-  background-color: rgb(255, 255, 255);
-  font-family: 'Poppins', sans-serif;
-  border: none;
-  cursor: pointer;
-
-}
 
 .links{
   margin-left: 2rem;
@@ -124,31 +92,59 @@
 
 .main{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 6rem;
 }
 
 .film-form{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around;
   background-color: rgb(226, 226, 227);
   padding: 3rem;
   border-radius: 25px;
 }
 
 .form-item{
+  display: flex;
   margin-bottom: 2rem;
+  justify-content: flex-start;
+
 }
 
 .form-input{
-  margin-right: 2rem;
+  margin-right: 1rem;
   border-radius: 25px;
   border: none;
   width: 225px;
   padding: 3px 20px 3px 15px;
+  flex: 2;
 
+}
+
+.form-label{
+  margin-right: 1rem;
+  flex: 1;
+}
+
+
+.login-link{
+  margin-bottom: 1rem;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  margin-top: .3rem;
+  margin-left: 2rem;
+
+}
+
+.registration-form{
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgb(226, 226, 227);
+  border-radius: 25px;
+  padding: 3rem;
+  margin-bottom: 10rem;
+  margin-left: 2rem;
 }
 
 
@@ -159,19 +155,44 @@
 
 }
 
-.form-input{
-  margin-right: 2rem;
+.categories{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(226, 226, 227);
   border-radius: 25px;
-  border: none;
-  width: 225px;
-  padding: 3px 20px 3px 15px;
+  padding: 3rem;
+  margin-right: 3rem;
+  
+}
+
+.col-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.col-one{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
 }
 
+.col-two{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
 
-.m-3{
-  text-decoration: none;
-  color: white;
+}
+
+.category-link{
+  display: flex;
+  justify-content: flex-start;
   font-family: 'Poppins', sans-serif;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background-color: rgb(38, 50, 71);
+  padding: 3px 15px 3px 15px;
+  border-radius: 25px;
 
 }
