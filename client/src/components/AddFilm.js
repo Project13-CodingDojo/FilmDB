@@ -21,7 +21,7 @@ const AddFilm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8000/api/addFilm',{
+        axios.post('http://localhost:8000/api/films',{
             title,
             director,
             genre,
@@ -31,7 +31,14 @@ const AddFilm = () => {
             image
         }).then((response)=>{
             console.log(response)
-            navigate('films');
+            console.log(response.data)
+            setTitle("");
+            setDirector("");
+            setCast("");
+            setGenre("");
+            setYearReleased("");
+            setFactoids("");
+            navigate('/films');
         }).catch((err)=>{
             console.log(err.response.data.err.errors);
             setErrors(err.response.data.err.errors);
@@ -127,10 +134,6 @@ return (
 
                         <div class="form-item">
                             <input className='form-input' type="text" value={factoids} onChange={(e)=>setFactoids(e.target.value)} placeholder="Fun facts..."/>
-                        </div>
-
-                        <div class="form-item">
-                    <input type="text"  className='form-input'value={image} onChange={(e)=>setImage(e.target.value)} placeholder="Film poster"/>
                         </div>
 
                         <div>
