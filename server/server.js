@@ -3,12 +3,16 @@ const cors = require("cors");
 const app = express();  
 const PORT = 8000
 require('dotenv').config()
+const cookieParser = require('cookie-parser')
+
 
 
 
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser())
+
 
 app.use(cors({
     origin:"http://localhost:3000"
@@ -17,7 +21,7 @@ app.use(cors({
 
 require('./config/mongoose.config')
 require('./routes/film.routes')(app)
-require('./routes/user.route')(app)
+require('./routes/user.routes')(app)
 
 
 
