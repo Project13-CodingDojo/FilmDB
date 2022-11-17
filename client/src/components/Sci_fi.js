@@ -14,12 +14,12 @@ const Sci_fi= () => {
         })
     },[])
     
-return (
-        <div>
+    return (
+        <div className='d-flex flex-wrap'>
         {
             list.map((films)=>(
-                <div>
-                    <p>{films.image}</p>
+                <div className='col col- mt-3'>
+                    <img src={films.image} className="col-6" /><br></br>
                     <p>{films.title}</p>
                 </div>
             ))
