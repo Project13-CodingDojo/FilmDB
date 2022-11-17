@@ -45,7 +45,7 @@ const Login = () => {
                 {errors.password ?<span className="text-danger">{errors.password.message}</span> : null}<br></br>
                 </div>
 
-                <button className='button'>Login</button>            </form>
+                <button type='submit' className='button'>Login</button>            </form>
         </div>
     )
 

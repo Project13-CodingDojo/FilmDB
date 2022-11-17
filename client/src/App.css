@@ -196,3 +196,22 @@
   border-radius: 25px;
 
 }
+
+.film-details{
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgb(226, 226, 227);
+  border-radius: 25px;
+  padding: 3rem;
+  margin-bottom: 10rem;
+  margin-left: 2rem;
+
+}
+
+.detail-line{
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: flex-start;
+
+}
