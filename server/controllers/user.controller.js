@@ -36,12 +36,5 @@ module.exports = {
         res.clearCookie('userToken')
         res.json({success:'User logged Out'})
     },
-    findById: async (req,res) => {
-        const user = user.findOne({_id:req.params.id})
-        .then((result)=>{
-            res.json(result)
-        }).catch((err)=>{
-            res.status(400).json(err)
-        })
-    }
+    
 }

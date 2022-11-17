@@ -21,9 +21,9 @@ const Register = () => {
             password,
             confirmPassword
 
-        },{withCredentials:true,Credentials:'include'})
+        })
         .then((res)=>{
-            navigate('/employees')
+            navigate('/films')
         }).catch((err)=>{
             console.log(err)
             setErrors(err.response.data.errors)

@@ -19,6 +19,7 @@ import Horror_Comedy from "./components/Horror_Comedy"
 import Kung_fu from "./components/Kung_fu"
 import Bollywood from "./components/Bollywood"
 import Anime from "./components/Anime"
+import Login from './components/Login';
 
 
 function App() {
@@ -45,6 +46,9 @@ function App() {
         <Route path="/films/anime" element={<Anime />} />
         <Route path="/" element={<Register/>}/>
         <Route path="/films" element={<AddFilm/>}/>
+        <Route path="/login" element={<Login/>}/>
+
+
       </Routes>
       </BrowserRouter>
 
