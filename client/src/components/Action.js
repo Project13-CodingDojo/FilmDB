@@ -1,8 +1,12 @@
 import React, {useState,useEffect} from 'react'
 import axios from 'axios'
+import { Link, useParams, useNavigate } from "react-router-dom";
+import ViewFilm from './ViewFilm';
+
 
 const Action = () => {
     
+    const { id } = useParams();
     const [list,setList] = useState([])
     
     useEffect(()=>{
@@ -17,15 +21,15 @@ const Action = () => {
 return (
         <div>
         {
-            list.map((films)=>(
-                <div>
-                    <p>{films.image}</p>
-                    <p>{films.title}</p>
+            list.map((film, index)=> { return (
+                <div key={film._id}>
+                    <p>{film.image}</p>
+                    <p><Link to={`/film/${film._id}`}>{film.title}</Link></p>
                 </div>
-            ))
+            );})
         }
         </div>
     )
 }
 
-export default Action
+export default Action;

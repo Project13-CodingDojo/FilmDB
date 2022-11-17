@@ -4,14 +4,19 @@ const FilmSchema = new mongoose.Schema({
 
     title:{
         type:String,
+        required: [true, "Title Name is required"],
+        minLength: [3, "Title Name must be at least 3 characters"],
     },
 
     director:{
         type:String,
+        required: [true, "Director Name is required"],
+        minLength: [3, "Director Name must be at least 3 characters"],
     },
 
     genre:{
         type:String,
+        required: [false],
         enum: [
             'Comedy',
             'Drama',
@@ -34,21 +39,25 @@ const FilmSchema = new mongoose.Schema({
 
     yearReleased:{
         type:Number,
+        required: [false],
     },
 
     cast:{
         type:String,
+        required: [false],
     },
 
     factoids:{
         type:String,
+        required: [false],
     },
 
     image:{
         type:String,
+        required: [false],
     }
 
-},{timestamps:true} )
+},{timestamps:true} );
 
 const Film = mongoose.model('Film', FilmSchema)
 module.exports = Film

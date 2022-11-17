@@ -1,5 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import axios from 'axios'
+import { Link, useParams, useNavigate } from "react-router-dom";
+
 
 const Anime = () => {
     
@@ -14,15 +16,15 @@ const Anime = () => {
             })
         },[])
         
-    return (
-            <div className='d-flex flex-wrap'>
+        return (
+            <div>
             {
-                list.map((films)=>(
-                    <div className='col col- mt-3'>
-                        <img src={films.image} className="col-6" /><br></br>
-                        <p>{films.title}</p>
+                list.map((film, index)=> { return (
+                    <div key={film._id}>
+                        <p>{film.image}</p>
+                        <p><Link to={`/film/${film._id}`}>{film.title}</Link></p>
                     </div>
-                ))
+                );})
             }
             </div>
         )
