@@ -26,6 +26,8 @@ return (
 
         <div className='links nav-item'>
         <NavLink to="/films" className="m-3">Home </NavLink>|
+
+        <NavLink to="/" className="m-3">Home </NavLink>|
         <NavLink to="/" className="m-3">About </NavLink>|
         <NavLink to="/" className="m-3">My Favorites </NavLink>
         <button className='button'>Logout</button>

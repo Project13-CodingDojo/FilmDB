@@ -82,6 +82,42 @@
 
 }
 
+
+.header-secondary{
+  color: rgb(27, 36, 52);
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+
+}
+
+.logo{
+  width: 10rem;
+  height: 10rem;
+}
+
+
+
+.search-input{
+  border-radius: 20px;
+  height: 40px;
+  width: 300px;
+  border: none;
+  padding: 2px 23px 2px 30px;
+}
+
+.button{
+  margin-left: 1rem;
+  border-radius: 25px;
+  width: 100px;
+  padding: 7px;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  cursor: pointer;
+
+}
+
 .links{
   margin-left: 2rem;
 }
@@ -104,6 +140,23 @@
 
 .form-item{
   margin-bottom: 2rem;
+}
+
+.form-input{
+  margin-right: 2rem;
+  border-radius: 25px;
+  border: none;
+  width: 225px;
+  padding: 3px 20px 3px 15px;
+
+}
+
+
+.m-3{
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .form-input{
