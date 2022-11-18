@@ -22,17 +22,17 @@ function App() {
                <Route path="/films/Anime" element={<ViewGenre genre={"Anime"} />} />
                <Route path="/films/Bollywood" element={<ViewGenre genre={"Bollywood"} />} />
                <Route path="/films/Comedy" element={<ViewGenre genre={"Comedy"} />} />
-               <Route path="/films/Crime_Noir" element={<ViewGenre genre={"Crime Noir"} />} />
+               <Route path="/films/Crime_Noir" element={<ViewGenre genre={"CrimeNoir"} />} />
                <Route path="/films/Documentary" element={<ViewGenre genre={"Documentary"} />} />
                <Route path="/films/Drama" element={<ViewGenre genre={"Drama"} />} />
                <Route path="/films/Family" element={<ViewGenre genre={"Family"} />} />
-               <Route path="/films/French_Cinema" element={<ViewGenre genre={"French Cinema"} />} />
+               <Route path="/films/French_Cinema" element={<ViewGenre genre={"FrenchCinema"} />} />
                <Route path="/films/Horror" element={<ViewGenre genre={"Horror"} />} />
-               <Route path="/films/Horror_Comedy" element={<ViewGenre genre={"Horror/Comedy"} />} />
-               <Route path="/films/Kung_fu" element={<ViewGenre genre={"Kung-Fu"} />} />
+               <Route path="/films/Horror_Comedy" element={<ViewGenre genre={"HorrorComedy"} />} />
+               <Route path="/films/Kung_fu" element={<ViewGenre genre={"KungFu"} />} />
                <Route path="/films/Romcom" element={<ViewGenre genre={"Romcom"} />} />
-               <Route path="/films/Sci_Fi" element={<ViewGenre genre={"Sci-Fi"} />} />
-               <Route path="/films/Silent_Movie" element={<ViewGenre genre={"Silent Movie"} />} />
+               <Route path="/films/Sci_Fi" element={<ViewGenre genre={"SciFi"} />} />
+               <Route path="/films/Silent_Movie" element={<ViewGenre genre={"SilentMovie"} />} />
                <Route path="/films/Thriller" element={<ViewGenre genre={"Thriller"} />} />
                <Route path="/" element={<Register />} />
                <Route path="/films" element={<AddFilm />} />
